@@ -46,9 +46,6 @@
 [submodule "deps/vim/ninrod/vim-multiple-cursors"]
 	path = vim/pack/allpackages/start/vim-multiple-cursors
 	url = https://github.com/ninrod/vim-multiple-cursors.git
-[submodule "deps/vim/pythonMode/pythonMode"]
-	path = vim/pack/allpackages/start/pythonMode
-	url = https://github.com/python-mode/python-mode.git
 [submodule "deps/vim/tommcdo/vim-exchange"]
 	path = vim/pack/allpackages/start/vim-exchange
 	url = https://github.com/tommcdo/vim-exchange.git
