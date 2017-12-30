@@ -13,15 +13,25 @@ source ~/.zsh.d/alias-dir.zsh
 source ~/.zsh.d/alias-docker.zsh
 source ~/.zsh.d/alias-emacs.zsh
 source ~/.zsh.d/alias-vim.zsh
+source ~/.zsh.d/alias-pacman.zsh
 source ~/.zsh.d/prompt.zsh
 source ~/.zsh.d/ninplug.zsh
 source ~/.zsh.d/plugins.zsh
+source ~/.zsh.d/nin-vi-mode.zsh
+source ~/.zsh.d/fzf.zsh
 
 # load step
 load_plugins
 
 # init completion system
 source ~/.zsh.d/completions.zsh
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+# POWERLEVEL9K_MODE='awesome-patched'
+# source ~/.dotfiles/deps/zsh/bhilburn/powerlevel9k/powerlevel9k.zsh-theme
 
 # colors for GNU ls (from coreutils)
-eval $(dircolors ~/.lscolors)
+# eval $(dircolors ~/.lscolors)
+
+
+# source ~/.xsh
+

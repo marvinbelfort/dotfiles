@@ -9,7 +9,7 @@ stty -echoctl
 # }}}
 # exports {{{
 
-export LANG=en_US.UTF-8
+#export LANG=pt_BR.UTF-8
 export TERM=xterm-256color
 export EDITOR=vim
 
@@ -115,3 +115,7 @@ md () {
 export PS1="${Blue}\w ${Red}\u${Cyan}@${Yellow}\h ${Purple}#${Rst} "
 
 # }}}
+
+
+source ~/.xsh
+

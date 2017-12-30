@@ -1,5 +1,5 @@
 if [[ -z ${EMACS+x} ]]; then
-  export EDITOR="v"
+  #export EDITOR="v"
 
   # simplest possible vi key configuration
   # no delays when switching keymaps
@@ -8,11 +8,11 @@ if [[ -z ${EMACS+x} ]]; then
   # bindkey -v
 
   # much more complex vi keys configuration
-  source ~/.zsh.d/nin-vi-mode.zsh
+  #source ~/.zsh.d/nin-vi-mode.zsh
 else
   # export KEYTIMEOUT=1
   # bindkey -v
-  source ~/.zsh.d/nin-vi-mode.zsh
+  #source ~/.zsh.d/nin-vi-mode.zsh
 fi
 
 source ~/.zsh.d/expand-alias.zsh

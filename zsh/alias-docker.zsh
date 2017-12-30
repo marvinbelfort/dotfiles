@@ -2,6 +2,8 @@
 # Docker functions
 # ------------------------------------
 
+alias docker='sudo docker'
+
 docker_alias_stop_all_containers() { docker stop $(docker ps -a -q); }
 docker_alias_remove_all_containers() { docker rm $(docker ps -a -q); }
 docker_alias_remove_all_empty_images() { docker images | grep '^<none' | awk '{print $3}' | xargs -I{} docker rmi {}; }

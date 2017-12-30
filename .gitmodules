@@ -1,0 +1,99 @@
+[submodule "deps/vim/bronson/vim-visual-star-search"]
+	path = deps/vim/bronson/vim-visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git
+[submodule "deps/vim/chaoren/vim-wordmotion"]
+	path = deps/vim/chaoren/vim-wordmotion
+	url = https://github.com/chaoren/vim-wordmotion.git
+[submodule "deps/vim/easymotion/easymotion"]
+	path = deps/vim/easymotion/easymotion
+	url = https://github.com/easymotion/vim-easymotion
+[submodule "deps/vim/edkolev/tmuxline.vim"]
+	path = deps/vim/edkolev/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule "deps/vim/ervandew/supertab"]
+	path = deps/vim/ervandew/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "deps/vim/fatih/vim-go"]
+	path = deps/vim/fatih/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "deps/vim/itchyny/lightline.vim"]
+	path = deps/vim/itchyny/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "deps/vim/jiangmiao/auto-pairs"]
+	path = deps/vim/jiangmiao/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "deps/vim/junegunn/fzf"]
+	path = deps/vim/junegunn/fzf
+	url = https://github.com/junegunn/fzf.vim
+[submodule "deps/vim/junegunn/vim-easy-align"]
+	path = deps/vim/junegunn/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "deps/vim/kana/vim-textobj-entire"]
+	path = deps/vim/kana/vim-textobj-entire
+	url = https://github.com/kana/vim-textobj-entire.git
+[submodule "deps/vim/kana/vim-textobj-user"]
+	path = deps/vim/kana/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
+[submodule "deps/vim/kovetskiy/sxhkd-vim"]
+	path = deps/vim/kovetskiy/sxhkd-vim
+	url = https://github.com/kovetskiy/sxhkd-vim
+[submodule "deps/vim/luochen1990/rainbow"]
+	path = deps/vim/luochen1990/rainbow
+	url = https://github.com/luochen1990/rainbow.git
+[submodule "deps/vim/ninrod/gruvbox"]
+	path = deps/vim/ninrod/gruvbox
+	url = https://github.com/ninrod/gruvbox.git
+[submodule "deps/vim/ninrod/vim-multiple-cursors"]
+	path = deps/vim/ninrod/vim-multiple-cursors
+	url = https://github.com/ninrod/vim-multiple-cursors.git
+[submodule "deps/vim/pythonMode/pythonMode"]
+	path = deps/vim/pythonMode/pythonMode
+	url = https://github.com/python-mode/python-mode.git
+[submodule "deps/vim/tommcdo/vim-exchange"]
+	path = deps/vim/tommcdo/vim-exchange
+	url = https://github.com/tommcdo/vim-exchange.git
+[submodule "deps/vim/tpope/vim-commentary"]
+	path = deps/vim/tpope/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "deps/vim/tpope/vim-pathogen"]
+	path = deps/vim/tpope/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "deps/vim/tpope/vim-repeat"]
+	path = deps/vim/tpope/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "deps/vim/tpope/vim-surround"]
+	path = deps/vim/tpope/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "deps/vim/vim-scripts/ReplaceWithRegister"]
+	path = deps/vim/vim-scripts/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister.git
+[submodule "deps/vim/w0rp/ale"]
+	path = deps/vim/w0rp/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "deps/vim/wellle/targets.vim"]
+	path = deps/vim/wellle/targets.vim
+	url = https://github.com/wellle/targets.vim.git
+[submodule "deps/vim/whatyouhide/vim-textobj-xmlattr"]
+	path = deps/vim/whatyouhide/vim-textobj-xmlattr
+	url = https://github.com/whatyouhide/vim-textobj-xmlattr.git
+[submodule "deps/zsh/bhilburn/powerlevel9k"]
+	path = deps/zsh/bhilburn/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule "deps/zsh/micha/jsawk"]
+	path = deps/zsh/micha/jsawk
+	url = https://github.com/micha/jsawk.git
+[submodule "deps/zsh/micha/resty"]
+	path = deps/zsh/micha/resty
+	url = https://github.com/micha/resty.git
+[submodule "deps/zsh/ninrod/docker-zsh-completion"]
+	path = deps/zsh/ninrod/docker-zsh-completion
+	url = https://github.com/ninrod/docker-zsh-completion.git
+[submodule "deps/zsh/supercrabtree/k"]
+	path = deps/zsh/supercrabtree/k
+	url = https://github.com/supercrabtree/k.git
+[submodule "deps/zsh/zsh-users/zsh-completions"]
+	path = deps/zsh/zsh-users/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "deps/zsh/zsh-users/zsh-syntax-highlighting"]
+	path = deps/zsh/zsh-users/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

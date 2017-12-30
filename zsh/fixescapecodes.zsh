@@ -21,7 +21,7 @@ bindkey "^[[6~" down-line-or-search #pgdown
 # numeric keypad return fix (enter)
 unamestr=$(uname)
 if [[ "$unamestr" == 'Linux' ]] && [[ -z ${EMACS+x} ]]; then
-  bindkey "${terminfo[kent]}" accept-line 
+  #bindkey "${terminfo[kent]}" accept-line 
 fi
 
 # Numeric Keypad fixes

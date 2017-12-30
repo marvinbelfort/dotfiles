@@ -1,7 +1,7 @@
 # -*- mode: sh -*-
 
 # gui
-alias emacs="background-emacs.sh"
+#alias emacs="background-emacs.sh"
 
 # terminal
 alias et="emacsclient.sh --tty"

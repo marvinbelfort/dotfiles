@@ -1,4 +1,5 @@
 execute pathogen#infect('bundle/{}/{}')
+call pathogen#helptags()
 
 " appearance
 let g:tmuxline_powerline_separators = 0
@@ -19,3 +20,7 @@ let g:rainbow_active = 1
 " multiple cursors config
 let g:multi_cursor_exit_from_visual_mode=0
 let g:multi_cursor_exit_from_insert_mode=0
+
+set nu
+set rnu
+
