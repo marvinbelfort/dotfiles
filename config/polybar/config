@@ -1,0 +1,179 @@
+[colors]
+alert = #bd2c40
+bar-background = #cc23130b
+bar-background-alt = #444
+bar-foreground = #dfdfdf
+bar-foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+date-background =#728158
+date-foreground =#000000
+green=#7cfc00
+
+[bar/default]
+bottom=True
+fixed-center = true
+height = 17
+radius = 6.0
+width = 100%
+background = ${colors.bar-background}
+foreground = ${colors.bar-foreground}
+line-size = 2
+border-size = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+font-0 = "Source Code Pro:size=8;1"
+font-1 = "FontAwesome:size=10;1"
+;font-2 = "DS\-Digital:size=13:weight=bold;3"
+font-2 = "DS\-Digital:size=14;3"
+font-3 = "Wuncon Siji:size=12:;2"
+
+modules-left = bspwm
+modules-center = mpd
+modules-right = battery volume xkeyboard wlan date
+tray-position = right
+tray = right
+tray-padding = 2
+tray-transparent = true
+wm-restack = bspwm
+override-redirect = true
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline =${colors.green}
+label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.green}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+format-prefix = ""
+format-prefix-foreground = ${colors.green}
+format-prefix-underline = ${colors.green}
+label-layout = %layout%
+label-layout-underline = ${colors.green}
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+;label-indicator-underline = ${colors.secondary}
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = %index%
+label-focused-background = ${colors.bar-background-alt}
+label-focused-underline= ${colors.green}
+label-focused-foreground= ${colors.primary}
+label-focused-padding = 2
+label-occupied = %index%
+label-occupied-padding = 2
+label-occupied-foreground= ${colors.green}
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+label-empty = %index%
+label-empty-foreground = ${colors.bar-foreground-alt}
+label-empty-padding = 2
+
+[module/date]
+type = internal/date
+interval = 5
+date =
+date-alt = " %Y-%m-%d"
+time = %H:%M
+time-alt = %H:%M:%S
+label-active-font = 2
+label = %{T3} %time% %{T-}
+;format =  <label>
+format =  <label>
+format-background = ${colors.date-background}
+format-foreground = ${colors.date-foreground}
+;format-underline = ${colors.bar-foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP0
+full-at = 98
+time-format = %H:%M
+
+label-charging= "%percentage%%"
+format-charging = <label-charging>
+format-charging-underline = #ffb52a
+
+label-discharging= "%percentage%% %time% %consumption%"
+format-discharging = <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = ""
+format-full-prefix-foreground = ${colors.green}
+format-full-underline = ${colors.green}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.bar-foreground-alt}
+
+[module/volume]
+type = internal/volume
+
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${colors.primary}
+
+format-muted-prefix = 
+format-muted-foreground = ${colors.secondary}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.bar-foreground-alt}
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 1
+margin-bottom = 1
