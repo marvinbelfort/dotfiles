@@ -5,9 +5,7 @@ sxhkd &
 
 #Configures Polybar
 pgrep -f polybar >/dev/null && pkill -9 -f polybar
-# while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar default &
-# while [[ !( pgrep -u $UID -x polybar ) ]] >/dev/null; do sleep 1; done
 
 #bspwm configurations
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -23,7 +21,6 @@ bspc config normal_border_color "#383C36"
 bspc config focused_border_color "#11840b"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a vscode-color-ui state=floating
 bspc rule -a font-manager state=floating
@@ -40,12 +37,9 @@ nitrogen --restore &
 pgrep -f compton >/dev/null && pkill -9 -f compton >/dev/null
 compton -bcC &
 
-
 #Start terminal
 pgrep -f xfce4-terminal >/dev/null || xfce4-terminal &
 
 #Redshift
 pgrep -f redshift >/dev/null && pkill -9 -f redshift
 redshift -c ~/.config/redshift/redshift.conf &
-
-
