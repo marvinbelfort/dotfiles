@@ -67,26 +67,23 @@
 [submodule "deps/vim/whatyouhide/vim-textobj-xmlattr"]
 	path = vim/pack/allpackages/start/vim-textobj-xmlattr
 	url = https://github.com/whatyouhide/vim-textobj-xmlattr.git
-[submodule "deps/zsh/bhilburn/powerlevel9k"]
-	path = deps/zsh/bhilburn/powerlevel9k
-	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "deps/zsh/micha/jsawk"]
-	path = deps/zsh/micha/jsawk
+	path = zsh/plugins/jsawk
 	url = https://github.com/micha/jsawk.git
 [submodule "deps/zsh/micha/resty"]
-	path = deps/zsh/micha/resty
+	path = zsh/plugins/resty
 	url = https://github.com/micha/resty.git
 [submodule "deps/zsh/ninrod/docker-zsh-completion"]
-	path = deps/zsh/ninrod/docker-zsh-completion
+	path = zsh/plugins/docker-zsh-completion
 	url = https://github.com/ninrod/docker-zsh-completion.git
 [submodule "deps/zsh/supercrabtree/k"]
-	path = deps/zsh/supercrabtree/k
+	path = zsh/plugins/k
 	url = https://github.com/supercrabtree/k.git
 [submodule "deps/zsh/zsh-users/zsh-completions"]
-	path = deps/zsh/zsh-users/zsh-completions
+	path = zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
 [submodule "deps/zsh/zsh-users/zsh-syntax-highlighting"]
-	path = deps/zsh/zsh-users/zsh-syntax-highlighting
+	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "vim/pack/allpackages/start/ReplaceWithRegister"]
 	path = vim/pack/allpackages/start/ReplaceWithRegister
