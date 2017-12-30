@@ -1,5 +1,3 @@
-execute pathogen#infect('bundle/{}/{}')
-call pathogen#helptags()
 
 " appearance
 let g:tmuxline_powerline_separators = 0
