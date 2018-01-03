@@ -1,65 +1,65 @@
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-exchange"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-exchange
+[submodule "vim/.vim/pack/allpackages/start/vim-exchange"]
+	path = vim/.vim/pack/allpackages/start/vim-exchange
 	url = https://github.com/tommcdo/vim-exchange.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/lightline.vim"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/lightline.vim
+[submodule "vim/.vim/pack/allpackages/start/lightline.vim"]
+	path = vim/.vim/pack/allpackages/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-multiple-cursors"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-multiple-cursors
+[submodule "vim/.vim/pack/allpackages/start/vim-multiple-cursors"]
+	path = vim/.vim/pack/allpackages/start/vim-multiple-cursors
 	url = https://github.com/ninrod/vim-multiple-cursors.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/fzf"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/fzf
+[submodule "vim/.vim/pack/allpackages/start/fzf"]
+	path = vim/.vim/pack/allpackages/start/fzf
 	url = https://github.com/junegunn/fzf.vim
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-visual-star-search"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-visual-star-search
+[submodule "vim/.vim/pack/allpackages/start/vim-visual-star-search"]
+	path = vim/.vim/pack/allpackages/start/vim-visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/auto-pairs"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/auto-pairs
+[submodule "vim/.vim/pack/allpackages/start/auto-pairs"]
+	path = vim/.vim/pack/allpackages/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-repeat"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-repeat
+[submodule "vim/.vim/pack/allpackages/start/vim-repeat"]
+	path = vim/.vim/pack/allpackages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/easymotion"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/easymotion
+[submodule "vim/.vim/pack/allpackages/start/easymotion"]
+	path = vim/.vim/pack/allpackages/start/easymotion
 	url = https://github.com/easymotion/vim-easymotion
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-textobj-xmlattr"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-textobj-xmlattr
+[submodule "vim/.vim/pack/allpackages/start/vim-textobj-xmlattr"]
+	path = vim/.vim/pack/allpackages/start/vim-textobj-xmlattr
 	url = https://github.com/whatyouhide/vim-textobj-xmlattr.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/supertab"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/supertab
+[submodule "vim/.vim/pack/allpackages/start/supertab"]
+	path = vim/.vim/pack/allpackages/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/targets.vim"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/targets.vim
+[submodule "vim/.vim/pack/allpackages/start/targets.vim"]
+	path = vim/.vim/pack/allpackages/start/targets.vim
 	url = https://github.com/wellle/targets.vim.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-go"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-go
+[submodule "vim/.vim/pack/allpackages/start/vim-go"]
+	path = vim/.vim/pack/allpackages/start/vim-go
 	url = https://github.com/fatih/vim-go.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-easy-align"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-easy-align
+[submodule "vim/.vim/pack/allpackages/start/vim-easy-align"]
+	path = vim/.vim/pack/allpackages/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/gruvbox"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/gruvbox
+[submodule "vim/.vim/pack/allpackages/start/gruvbox"]
+	path = vim/.vim/pack/allpackages/start/gruvbox
 	url = https://github.com/ninrod/gruvbox.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-surround"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-surround
+[submodule "vim/.vim/pack/allpackages/start/vim-surround"]
+	path = vim/.vim/pack/allpackages/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/sxhkd-vim"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/sxhkd-vim
+[submodule "vim/.vim/pack/allpackages/start/sxhkd-vim"]
+	path = vim/.vim/pack/allpackages/start/sxhkd-vim
 	url = https://github.com/kovetskiy/sxhkd-vim
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/tmuxline.vim"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/tmuxline.vim
+[submodule "vim/.vim/pack/allpackages/start/tmuxline.vim"]
+	path = vim/.vim/pack/allpackages/start/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/ale"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/ale
+[submodule "vim/.vim/pack/allpackages/start/ale"]
+	path = vim/.vim/pack/allpackages/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-commentary"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-commentary
+[submodule "vim/.vim/pack/allpackages/start/vim-commentary"]
+	path = vim/.vim/pack/allpackages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-wordmotion"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/vim-wordmotion
+[submodule "vim/.vim/pack/allpackages/start/vim-wordmotion"]
+	path = vim/.vim/pack/allpackages/start/vim-wordmotion
 	url = https://github.com/chaoren/vim-wordmotion.git
-[submodule "/home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/rainbow"]
-	path = /home/marvin/.dotfiles/vim/.vim/pack/allpackages/start/rainbow
+[submodule "vim/.vim/pack/allpackages/start/rainbow"]
+	path = vim/.vim/pack/allpackages/start/rainbow
 	url = https://github.com/luochen1990/rainbow.git
 [submodule "vim/.vim/pack/allpackages/start/vim-textobj-entire"]
 	path = vim/.vim/pack/allpackages/start/vim-textobj-entire
