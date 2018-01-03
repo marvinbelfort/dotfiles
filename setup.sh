@@ -1,6 +1,9 @@
 #!/bin/bash
+
+git submodule update --recursive --remote
+
 stow zsh
 stow vim
 stow config
 stow git
-stou ag
+stow ag
