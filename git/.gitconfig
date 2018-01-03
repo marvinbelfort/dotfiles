@@ -39,3 +39,6 @@
 [grep]
   lineNumber = true
   extendRegexp = true
+[user]
+	email = marvinbelfort@gmail.com
+	name = Marcus Vinícius Belfort
