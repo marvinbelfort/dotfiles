@@ -17,7 +17,7 @@ source ~/.zsh.d/plugins.zsh
 source ~/.zsh.d/nin-vi-mode.zsh
 source ~/.zsh.d/fzf.zsh
 
-for file in $(find ~/.zsh.d | grep plugin.zsh)
+for file in $(find ~/.zsh.d/plugins | grep 'plugin\.zsh$')
 do
   source $file
 done
