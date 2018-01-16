@@ -133,7 +133,15 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run
+ rofi -show run
+
+#Rofi windows
+alt + space
+	rofi -show window
+
+#Rofi + greenclip
+alt + x
+	rofi -modi "clipboard:greenclip print" -show clipboard
 
 # make sxhkd reload its configuration files:
 # super + Escape
