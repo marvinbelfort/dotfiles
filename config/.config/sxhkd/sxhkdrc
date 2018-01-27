@@ -139,9 +139,18 @@ super + space
 alt + space
 	rofi -show window
 
+alt + Tab
+	rofi -show window
+
 #Rofi + greenclip
 alt + x
 	rofi -modi "clipboard:greenclip print" -show clipboard
+
+#Printscreen
+Print
+	maim -s ~/Images/Screenshots/$(date +%H:%M:%S.%d-%m-%y).png	
+control + Print
+	maim ~/Images/Screenshots/$(date +%H:%M:%S.%d-%m-%y).png	
 
 # make sxhkd reload its configuration files:
 # super + Escape

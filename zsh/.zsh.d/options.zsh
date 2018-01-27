@@ -10,6 +10,7 @@ setopt append_history
 setopt extended_history
 setopt share_history
 setopt hist_verify
+setopt HIST_IGNORE_ALL_DUPS
 
 # I actually want to profile my command usage
 # setopt hist_ignore_all_dups

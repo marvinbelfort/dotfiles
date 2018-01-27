@@ -3,6 +3,7 @@
 
 build_prompt_char() {
   local pc="$DOT_PROMPT_CHAR"
+   # local pc="::"
 
   if [[ "${SHELL_IS_DOCKERIZED}" == "true" ]] && [[ -n ${DOT_DOCKER_PROMPT_CHAR+x} ]]; then
     pc="$DOT_DOCKER_PROMPT_CHAR"

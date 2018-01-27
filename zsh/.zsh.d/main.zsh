@@ -7,14 +7,18 @@ source ~/.zsh.d/termcolors.zsh
 source ~/.zsh.d/fixescapecodes.zsh
 source ~/.zsh.d/zleconfig.zsh
 source ~/.zsh.d/functions.zsh
+source ~/.zsh.d/docker-functions.zsh
 source ~/.zsh.d/alias.zsh
 source ~/.zsh.d/alias-git.zsh
 source ~/.zsh.d/alias-dir.zsh
 source ~/.zsh.d/alias-docker.zsh
 source ~/.zsh.d/alias-pacman.zsh
+
 source ~/.zsh.d/prompt.zsh
 source ~/.zsh.d/plugins.zsh
-source ~/.zsh.d/nin-vi-mode.zsh
+# source ~/.zsh.d/nin-vi-mode.zsh
+
+bindkey -v
 source ~/.zsh.d/fzf.zsh
 
 for file in $(find ~/.zsh.d/plugins | grep 'plugin\.zsh$')
