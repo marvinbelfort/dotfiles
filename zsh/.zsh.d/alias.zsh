@@ -30,3 +30,6 @@ alias r='~/.dotfiles/install.zsh'
 
 #xclip
 alias xclip='xclip -selection clipboard '
+
+#Title to x terminal
+alias st=set_window_title

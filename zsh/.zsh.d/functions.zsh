@@ -54,5 +54,9 @@ md() {
   bc -l <<< "$@"
 }
 
+set_window_title(){
+  printf "\033];$1\007"
+}
+
 
 # }}}
