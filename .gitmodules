@@ -88,3 +88,9 @@
 [submodule "zsh/.zsh.d/plugins/zsh-users/zsh-syntax-highlighting"]
 	path = zsh/.zsh.d/plugins/zsh-users/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "vim/.vim/pack/allpackages/start/goyo.vim"]
+	path = vim/.vim/pack/allpackages/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule "vim/.vim/pack/allpackages/start/vim-markdown"]
+	path = vim/.vim/pack/allpackages/start/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
