@@ -4,7 +4,7 @@ DIR_HISTORY="$HOME/.dir_history"
 pwd_hook() {
   touch $DIR_HISTORY
   local _cwd=$(pwd)
-  local num=22
+  local num=200
   lines=($_cwd)
   for line in $(awk '!a[$0]++' $DIR_HISTORY)
   do
