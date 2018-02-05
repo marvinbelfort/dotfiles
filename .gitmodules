@@ -13,9 +13,6 @@
 [submodule "vim/.vim/pack/allpackages/start/vim-visual-star-search"]
 	path = vim/.vim/pack/allpackages/start/vim-visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
-[submodule "vim/.vim/pack/allpackages/start/auto-pairs"]
-	path = vim/.vim/pack/allpackages/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "vim/.vim/pack/allpackages/start/vim-repeat"]
 	path = vim/.vim/pack/allpackages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
