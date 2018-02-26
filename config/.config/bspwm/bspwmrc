@@ -44,6 +44,9 @@ pgrep -f xfce4-terminal >/dev/null || xfce4-terminal &
 pgrep -f redshift >/dev/null && pkill -9 -f redshift
 redshift -c ~/.config/redshift/redshift.conf &
 
+#Networkmanager
+nm-applet &
+
 #Green clip
 pgrep -f greenclip >/dev/null && pkill -9 -f greenclip
 greenclip daemon &
