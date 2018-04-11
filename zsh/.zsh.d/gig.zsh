@@ -1,5 +1,6 @@
 
-__filter_target(){
+#Put dir/file names in a proper format
+__format_target(){
       if [[ -e $target ]]; then
         target=$(readlink -f $target)
         if [[ -d $target ]]; then
@@ -12,6 +13,7 @@ __filter_target(){
       fi
 }
 
+#add parameters to current git repo gitignore
 git_ignore(){
 
   local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
@@ -24,15 +26,16 @@ git_ignore(){
 
   local ignored=()
 
+  #When calling without parameters, just add current dir
   if [ $# -eq 0 ]; then
     target=$(pwd)
     if [[ "$target" != $git_root ]]; then
-      __filter_target
+      __format_target
     fi
   else
     for target in $@
     do
-      __filter_target
+      __format_target
     done
   fi
   if [[  ${#ignored[@]} -gt 0 ]]; then

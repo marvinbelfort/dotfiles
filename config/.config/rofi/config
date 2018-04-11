@@ -1,1 +1,4 @@
 rofi.theme: /usr/share/rofi/themes//gruvbox-dark.rasi
+
+# Rofi menu sem os :
+#/* https://github.com/DaveDavenport/rofi/issues/637 */

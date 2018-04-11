@@ -36,7 +36,7 @@ modules-right = battery volume xkeyboard wlan date
 tray-position = right
 tray = right
 tray-padding = 2
-tray-transparent = true
+tray-transparent = false
 wm-restack = bspwm
 override-redirect = true
 

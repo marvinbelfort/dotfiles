@@ -30,3 +30,5 @@ done
 # init completion system
 source ~/.zsh.d/completions.zsh
 
+export EDITOR=vim
+fortune

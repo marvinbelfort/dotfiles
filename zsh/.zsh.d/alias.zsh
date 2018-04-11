@@ -20,6 +20,9 @@ alias tarc='tar -zcvf file.tar.gz'
 alias tarx='tar -zxvf'
 alias cf='code $(fzf)'
 alias vf='vim $(fzf)'
+alias v='vim'
+alias sv='sudoedit'
+alias nj='~/Scripts/journal_create.sh'
 
 # zsh config
 alias re='exec zsh'
@@ -33,3 +36,4 @@ alias xclip='xclip -selection clipboard '
 
 #Title to x terminal
 alias st=set_window_title
+alias gradle='gradle --console rich '

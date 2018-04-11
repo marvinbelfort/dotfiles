@@ -20,9 +20,9 @@ super + m
 super + y
 	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
 
-# swap the current node and the biggest node
+# swap the current node and the brother
 super + g
-	bspc node -s biggest
+	bspc node -s @brother
 
 #
 # state/flags
@@ -133,7 +133,7 @@ super + Return
 
 # program launcher
 super + space
- rofi -show run
+ rofi -show run -display-run ">>> "
 
 #Rofi windows
 alt + space
