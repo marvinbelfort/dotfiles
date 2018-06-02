@@ -32,3 +32,7 @@ source ~/.zsh.d/completions.zsh
 
 export EDITOR=vim
 fortune
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/marvin/.sdkman"
+[[ -s "/home/marvin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/marvin/.sdkman/bin/sdkman-init.sh"
