@@ -1,2 +1,5 @@
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT SSH_AUTH_SOCK
+dbus-update-activation-environment --systemd DISPLAY
+
+exec xrdb .Xresources &  /usr/bin/bspwm
