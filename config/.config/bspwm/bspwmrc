@@ -20,12 +20,17 @@ bspc config gapless_monocle      true
 bspc config normal_border_color "#383C36"
 bspc config focused_border_color "#11840b"
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a mplayer2 state=floating
-bspc rule -a vscode-color-ui state=floating
-bspc rule -a font-manager state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a sun-awt-X11-XDialogPeer state=floating follow=on
+# bspc rule -a jetbrains-studio state=floating desktop=^4
+# bspc rule -a mplayer2 state=floating
+# bspc rule -a vscode-color-ui state=floating
+# bspc rule -a font-manager state=floating
+# bspc rule -a Kupfer.py focus=on
+# bspc rule -a Screenkey manage=off
+
+
+bspc config external_rules_command /home/marvin/.config/bspwm/external_rules &
 
 #Set Mouse pointer to arrow
 xsetroot -cursor_name left_ptr &
@@ -41,8 +46,8 @@ compton -bcC &
 pgrep -f xfce4-terminal >/dev/null || xfce4-terminal &
 
 #Redshift
-pgrep -f redshift >/dev/null && pkill -9 -f redshift
-redshift -c ~/.config/redshift/redshift.conf &
+# pgrep -f redshift >/dev/null && pkill -9 -f redshift
+# redshift -c ~/.config/redshift/redshift.conf &
 
 #Networkmanager
 nm-applet &
