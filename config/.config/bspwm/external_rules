@@ -1,29 +1,36 @@
 #! /bin/bash
 
+log=~/.config/bspwm/window_logs
+
 wid=$1
 class=$2
 instance=$3
 title=$(xtitle "$wid")
 
 # Debug:
-# exec 3>&1 4>&2 >$log 2>&1
 # info=$(xwininfo -id $wid)
-# echo "=========================================" 
-# echo "wid=$wid class=$class instance=$instance" 
+# exec 3>&1 4>&2 >>$log 2>&1
+# echo "===== [wid=$wid class=$class instance=$instance] =====" 
 # echo "Title = $title" 
 # echo "Info = $info" 
-# echo "=========================================" 
+# echo "------------------------------------------------------" 
 # exec 1>&3 2>&4
 
 case "$title" in
- "Emulator")
-     echo "desktop=^5"
+  "Emulator")
+    echo "desktop=^5"
+    echo "state=floating" #Will remember last position
      ;; 
- "Android Studio")
-     echo "desktop=^4"
+  "Android Studio")
+    echo "desktop=^4"
+    echo "state=fullscreen"
+     ;; 
+  "Tip of the Day")
+    echo "desktop=^4"
+    echo "state=floating" #Will remember last position
      ;;
- "Tip of the Day")
-     echo "desktop=^4"
+  "Mozilla Firefox")
+    echo "desktop=^2"
      ;;
 esac
 
