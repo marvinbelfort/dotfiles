@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlan0
+Connection=wireless
+Security=wpa
+ESSID=2G_MARVIN
+IP=dhcp
+Key=\"0c6d2f80d9587eab49dad2027d8cdd1f4f68b58de8f2c060abd08fc851c1b3c8
