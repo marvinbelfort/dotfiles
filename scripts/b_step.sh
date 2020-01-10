@@ -14,6 +14,7 @@ pacstrap /mnt \
 dialog \
 netctl \
 wpa_supplicant \
+wireless_tools \
 dhcpcd \
 
 
@@ -82,7 +83,6 @@ vim-minimal \
 vpnc \
 wget \
 wireless-regdb \
-wireless_tools \
 wvdial \
 xfsprogs \
 xl2tpd \
