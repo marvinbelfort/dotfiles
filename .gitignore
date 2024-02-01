@@ -1,0 +1,7 @@
+__pycache__/
+zsh/oh-my-zsh/*
+!zsh/oh-my-zsh/custom/
+!zsh/oh-my-zsh/custom/*
+qtile/icons/*
+qtile/__pycache__/*
+
