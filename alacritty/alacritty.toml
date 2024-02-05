@@ -6,6 +6,8 @@ style = "Beam"
 
 [font]
 size = 10.0
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+
 
 [window]
 opacity=0.9

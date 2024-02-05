@@ -6,16 +6,16 @@ local g = vim.g
 opt.clipboard:append { 'unnamedplus', 'unnamed' }
 
 g.clipboard = {
-	me = "xclip-xfce4-clipman",
-	copy = {
-		["+"] = "xclip -selection clipboard",
-		["*"] = "xclip -selection clipboard",
-	},
-	paste = {
-		["+"] = "xclip -selection clipboard -o",
-		["*"] = "xclip -selection clipboard -o",
-	},
-	cache_enabled = 1
+    me = "xclip-xfce4-clipman",
+    copy = {
+        ["+"] = "xclip -selection clipboard",
+        ["*"] = "xclip -selection clipboard",
+    },
+    paste = {
+        ["+"] = "xclip -selection clipboard -o",
+        ["*"] = "xclip -selection clipboard -o",
+    },
+    cache_enabled = 1
 }
 
 -- Global Options
@@ -26,9 +26,10 @@ opt.smartcase = true
 opt.wrap = true
 opt.tabstop = 4
 opt.shiftwidth = 4
+opt.expandtab = true
 opt.ruler = true
 opt.number = true
-opt.relativenumber = true
+-- opt.relativenumber = true
 
 -- Leader
 g.mapleader = ' '
@@ -37,8 +38,8 @@ g.maplocalleader = ' '
 
 opt.hlsearch = true
 opt.list = true
-opt.listchars = { tab = '  ', trail = '·' }
+opt.listchars = { tab = '󰌒 ', trail = '￮', multispace = '·' }
 opt.autoread = true
 opt.shortmess:append "I"
 opt.showmatch = true
-opt.showbreak = '←←'
+opt.showbreak = '󱞥'
