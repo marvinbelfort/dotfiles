@@ -1,6 +1,10 @@
 # Demais configurações possíveis:
 # https://alacritty.org/config-alacritty.html
 
+# [shell]
+# program = "/bin/zsh"
+# args = ["-c", "zellij"]
+
 [cursor]
 style = "Beam"
 

@@ -1,5 +1,11 @@
 return {
     "NvChad/nvim-colorizer.lua",
     event = { "BufReadPre", "BufNewFile" },
-    config = true,
+    config = function()
+        require 'colorizer'.setup({
+        }, {
+            mode = 'foreground',
+            RRGGBBAA = true,
+        })
+    end,
 }

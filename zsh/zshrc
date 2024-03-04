@@ -1,3 +1,17 @@
+
+# if [[ -z "$ZELLIJ" ]]; then
+#     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+#         zellij attach -c
+#     else
+#         zellij
+#     fi
+#
+#     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+#         exit
+#     fi
+# fi
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -106,10 +120,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$HOME/bin/:$PATH"
+export PATH="$HOME/data/bin/:$PATH"
 compinit -d ~/.cache/zsh/zcompdump
 # PROMPT='%{$fg[magenta]%}$(virtualenv_info)%{$reset_color%} %{$fg[cyan]%}%3~%{$reset_color%}|$(git_prompt_info)$ '
 eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#
+setopt inc_append_history
+

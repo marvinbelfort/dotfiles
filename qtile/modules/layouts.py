@@ -6,13 +6,13 @@ from .widgets import colors
 
 layouts = [
     Columns(
-       border_focus="#2ac2c9",
-       border_normal="#665c54",
-       border_on_single=True,
-       border_width=2,
-       margin=4,
+        border_focus="#2ac2c9",
+        border_normal="#665c54",
+        border_on_single=True,
+        border_width=2,
+        margin=4,
     ),
-    #layout.Max(),
+    # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     Bsp(),
@@ -40,7 +40,7 @@ floating_layout = Floating(
         Match(title="pinentry"),  # GPG key password entry
         Match(title="Blender Preferences"),  # GPG key password entry
         Match(title="Copy file(s)"),  # GPG key password entry
-        Match(wm_class="VirtualBox Machine"), #Vm virtualbox
-        Match(wm_class="font-manager"), #Vm virtualbox
+        Match(wm_class="VirtualBox Machine"),  # Vm virtualbox
+        Match(wm_class="font-manager"),  # Vm virtualbox
     ]
 )

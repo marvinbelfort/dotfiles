@@ -29,6 +29,7 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.ruler = true
 opt.number = true
+opt.swapfile = false
 -- opt.relativenumber = true
 
 -- Leader
