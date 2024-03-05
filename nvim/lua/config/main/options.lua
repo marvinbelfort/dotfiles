@@ -44,3 +44,5 @@ opt.autoread = true
 opt.shortmess:append "I"
 opt.showmatch = true
 opt.showbreak = '󱞥'
+
+opt.termguicolors = true

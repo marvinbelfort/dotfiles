@@ -4,7 +4,7 @@
     geometry = "320x5-12+42"
     indicate_hidden = yes
     shrink = no
-    transparency = 10
+    transparency = 30
     notification_height = 0
     separator_height = 2
     padding = 10
@@ -30,9 +30,9 @@
     max_icon_size = 32
     icon_path = /usr/share/icons/Adwaita/16x16/devices:/usr/share/icons/Adwaita/16x16/places/
 
-    dmenu = /usr/bin/rofin -dmenu -p dunst:
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
 
-  #  browser = /usr/bin/firefox -new-tab
+      #  browser = /usr/bin/firefox -new-tab
     browser = /usr/bin/google-chrome-stable 
 
     always_run_script = true
