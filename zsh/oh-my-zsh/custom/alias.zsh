@@ -21,7 +21,10 @@ alias pc='sudo pacman'
 
 alias yay='yay --answerclean All --answerdiff None --answeredit None'
 
-alias l='eza --group-directories-first -la --icons=auto'
-alias ls='eza --group-directories-first --icons=auto' 
+alias l='eza --group-directories-first -la --icons=auto -s extension'
+alias ls='eza --group-directories-first --icons=auto -s extension' 
 alias tree='eza -aT --icons=auto'
+alias trgi='eza -aT --icons=auto --git-ignore'
 alias cat='bat'
+
+alias blendev='/usr/bin/blender -P /home/marvin/data/source/Blender/bootstrap_bpy_externall_server/bootstrap-listening.py'

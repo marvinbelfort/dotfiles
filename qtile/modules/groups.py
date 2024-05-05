@@ -1,6 +1,6 @@
 from libqtile.config import Group, ScratchPad, DropDown
 from .keys import *
-
+# pyright: basic
 
 groups = [Group(i) for i in "uiop7890"]
 

@@ -26,11 +26,18 @@ return {
 
         mason_lspconfig.setup({
             -- list of servers for mason to install
+            -- Servers reference:
+            -- https://github.com/williamboman/mason-lspconfig.nvim
             ensure_installed = {
                 "rust_analyzer",
                 "lua_ls",
                 "bashls",
-                "pyright",
+                "clangd",
+                "cmake",
+                "jsonls",
+                "yamlls",
+                "markdown_oxide",
+
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
@@ -43,6 +50,9 @@ return {
                 "isort", -- python formatter
                 "black", -- python formatter
                 "pylint", -- python linter
+                "shellcheck", -- shell
+                "shfmt",
+                "clang-format",
             },
         })
     end,

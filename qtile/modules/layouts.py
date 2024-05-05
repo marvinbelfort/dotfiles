@@ -1,6 +1,7 @@
 from libqtile.layout.bsp import Bsp
 from libqtile.layout.floating import Floating
 from libqtile.layout.columns import Columns
+from libqtile.layout.zoomy import Zoomy
 from libqtile.config import Match
 from .widgets import colors
 
@@ -15,7 +16,7 @@ layouts = [
     # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    Bsp(),
+    # Bsp(),
     # layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),
@@ -23,7 +24,13 @@ layouts = [
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
-    # layout.Zoomy(),
+    Zoomy(
+        border_focus="#2ac2c9",
+        border_normal="#665c54",
+        border_on_single=True,
+        border_width=2,
+        margin=4,
+    ),
 ]
 
 

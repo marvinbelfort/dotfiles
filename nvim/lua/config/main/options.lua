@@ -1,6 +1,6 @@
 local opt = vim.opt
 local g = vim.g
-
+ 
 
 --clipboard
 opt.clipboard:append { 'unnamedplus', 'unnamed' }
@@ -44,5 +44,25 @@ opt.autoread = true
 opt.shortmess:append "I"
 opt.showmatch = true
 opt.showbreak = '󱞥'
+
+-- Folding
+function _G.foldtext()
+    return vim.fn.getline(vim.v.foldstart) .. "..." .. vim.fn.trim(vim.fn.getline(vim.v.foldend))
+end
+function _G.foldtext2()
+  local start_line = vim.fn.getline(vim.v.foldstart)
+  local end_line = vim.fn.trim(vim.fn.getline(vim.v.foldend))
+  local tabstop = vim.opt.tabstop:get()
+  start_line = start_line:gsub("\\t", string.rep(" ", tabstop))
+  return start_line .. "..." .. end_line
+end
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldtext = "v:lua.foldtext2()"
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldnestmax = 3
+vim.opt.foldminlines = 1
+vim.opt.foldlevel = 1
+--
 
 opt.termguicolors = true

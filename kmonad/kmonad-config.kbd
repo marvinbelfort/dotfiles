@@ -22,23 +22,38 @@
 
 (defalias
     ç ;
-    meta (tap-hold-next-release 250 a lmet)
-    alts (tap-hold-next-release 250 s lalt)
-    ctld (tap-hold-next-release 250 d lctl)
-    sftf (tap-hold-next-release 250 f lsft)
+    meta (tap-hold-next-release 512 a lmet)
+    alts (tap-hold-next-release 512 s lalt)
+    ctld (tap-hold-next-release 512 d lctl)
+    sftf (tap-hold-next-release 512 f lsft)
 
-    sftj (tap-hold-next-release 250 j rsft)
-    ctlk (tap-hold-next-release 250 k rctl)
-    altl (tap-hold-next-release 250 l lalt)
-    metç (tap-hold-next-release 250 @ç rmet)
-    ces (tap-hold 250 esc lctl)
+    sftj (tap-hold-next-release 512 j rsft)
+    ctlk (tap-hold-next-release 512 k rctl)
+    altl (tap-hold-next-release 512 l lalt)
+    metç (tap-hold-next-release 512 @ç rmet)
+    ces (tap-hold 1024 esc lctl)
+    def (layer-switch default)
+    gam (layer-switch game)
+    slsh (sticky-key 512 lsft)
+    srsh (sticky-key 512 rsft)
+    slct (sticky-key 512 lctl)
+    srct (sticky-key 512 rctl)
 )
 
-(deflayer qwerty
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        prnt slck pause
+(deflayer default
+  esc  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12         prnt @gam pause
+  apo  1     2     3     4     5     6     7     8     9     0     -     =   bspc    ins  home  pgup  nlck kp/  kp*  kp-
+  tab  q     w     e     r     t     y     u     i     o     p     grv  [    ret     del  end   pgdn  kp7  kp8  kp9  kp+
+  @ces @meta @alts @ctld @sftf g     h     @sftj @ctlk @altl @metç ~     ]                            kp4  kp5  kp6
+  lsft  \     z     x     c     v     b     n     m     ,     .     ;     /   @srsh          up         kp1  kp2  kp3  kprt
+  lctl lmet  lalt                   spc                    ralt rmet menu    rctl     left down rght  kp0  kp.
+)
+
+(deflayer game
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        prnt @def pause
   apo  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  q    w    e    r    t    y    u    i    o    p    grv  [    ret   del  end  pgdn  kp7  kp8  kp9  kp+
-  @ces @meta    @alts    @ctld    @sftf g    h    @sftj @ctlk @altl @metç    ~    ]                          kp4  kp5  kp6
+  caps a    s    d    f    g    h    j    k    l    ;    '    ]                          kp4  kp5  kp6
   lsft \    z    x    c    v    b    n    m    ,    .    ;    /    rsft        up        kp1  kp2  kp3  kprt
   lctl lmet lalt           spc                 ralt rmet menu rctl       left down rght  kp0  kp.
 )
