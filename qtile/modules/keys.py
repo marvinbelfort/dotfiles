@@ -37,6 +37,11 @@ keys = [
         lazy.spawn("rofi -show combi -display-combi '  ' -display-drun '  ' -display-window ' 󰖳 ' "),
         desc="Move window focus to other window",
     ),
+    Key(
+        "M-<F11>",
+        lazy.spawn("/home/marvin/data/bin/game_toggle.sh"),
+        desc="Toggle game mode",
+    ),
     Key("M-<Return>", lazy.spawn(terminal), desc="Launch terminal"),
     Key("M-C-r", lazy.reload_config(), desc="Reload the config"),
     Key("M-C-q", lazy.shutdown(), desc="Shutdown Qtile"),

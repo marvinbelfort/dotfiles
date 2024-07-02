@@ -32,6 +32,8 @@ return {
                 { desc = "Lsp: Toggle inlay hints" })
         end
 
+        local capabilities = cmp_nvim_lsp.default_capabilities()
+        -- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
@@ -39,20 +41,21 @@ return {
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
         end
 
-        local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-        capabilities.workspace = {
-            didChangeWatchedFiles = {
-                dynamicRegistration = true,
-            },
-        }
+        lspconfig["pyright"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        -- capabilities.workspace = {
+        --     didChangeWatchedFiles = {
+        --         dynamicRegistration = true,
+        --     },
+        -- }
 
         lspconfig["markdown_oxide"].setup({ capabilities = capabilities, on_attach = on_attach, })
-
         lspconfig["basedpyright"].setup({ capabilities = capabilities, on_attach = on_attach, })
-
         lspconfig["clangd"].setup({ capabilities = capabilities, on_attach = on_attach, })
-
         lspconfig["rust_analyzer"].setup({ capabilities = capabilities, on_attach = on_attach, })
 
         lspconfig["lua_ls"].setup({
