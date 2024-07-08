@@ -1,0 +1,19 @@
+{
+    "bash/bashrc": "~/.bashrc",
+    "git/gitconfig": "~/.gitconfig",
+    "zsh/p10k.zsh": "~/.p10k.zsh",
+    "X11/xinitrc": "~/.xinitrc",
+    "X11/xprofile": "~/.xprofile",
+    "zsh/zshrc": "~/.zshrc",
+    "alacritty": "~/.config/alacritty",
+    "dunst": "~/.config/dunst",
+    "fontconfig": "~/.config/fontconfig",
+    "nvim": "~/.config/nvim",
+    "picom": "~/.config/picom",
+    "qtile": "~/.config/qtile",
+    "rofi": "~/.config/rofi",
+    "terminator": "~/.config/terminator",
+    "kmonad": "~/.config/kmonad",
+    "hypr": "~/.config/hypr",
+    "zsh/oh-my-zsh/custom": "~/.config/oh-my-zsh/custom"
+}

@@ -2,7 +2,7 @@ from libqtile.config import Group, ScratchPad, DropDown
 from .keys import *
 # pyright: basic
 
-groups = [Group(i) for i in "uiop234567890"]
+groups = [Group(i) for i in "uiop34567890"]
 
 for i in groups:
     keys.extend(
