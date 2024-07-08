@@ -4,9 +4,12 @@ import os
 import re
 import json
 
+from common import dotfiles_folder, home_folder
+
+
 debug = False
-dotfiles_folder = "/".join(os.path.dirname(os.path.abspath(__file__)).split("/")[:-1])
-home_folder = os.path.expanduser("~")
+dotfiles_folder = dotfiles_folder()
+home_folder = home_folder()
 
 
 def find_dotfiles_symlinks_recursively(start_path):
@@ -83,4 +86,8 @@ def recreate():
             print(f"Erro {e}")
 
 
-recreate()
+if True:
+    create_config()
+
+if False:
+    recreate()
