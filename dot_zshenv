@@ -1,0 +1,57 @@
+# XDG Base Directory Specification
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# Rust toolchain
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+# Docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
+# GnuPG
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+# Python: IPython & Jupyter
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+
+# Machine Learning
+export KERAS_HOME="$XDG_DATA_HOME/keras"
+export MODELSCOPE_CACHE="$XDG_CACHE_HOME/modelscope"
+export CUPY_CACHE_DIR="$XDG_CACHE_HOME/cupy/kernel_cache"
+
+# Node.js & package managers
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+
+# Gradle
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+
+# Android SDK
+export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+alias adb='HOME="$XDG_DATA_HOME/android" adb'
+
+# Ollama
+export OLLAMA_MODELS="$XDG_DATA_HOME/ollama/models"
+
+# LyX
+export LYX_USERDIR="$XDG_CONFIG_HOME/lyx"
+
+# Kotlin/Native
+export KONAN_DATA_DIR="$XDG_CACHE_HOME/konan"
+
+# Oh-My-Zsh (se quiser relocar - opcional)
+# export ZSH="$XDG_DATA_HOME/oh-my-zsh"
+# export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# Add cargo binaries to PATH
+export PATH="$CARGO_HOME/bin:$PATH"
+
+# conda
+export CONDARC="$XDG_CACHE_HOME/conda/condarc"
+

@@ -1,0 +1,8 @@
+# carrega configuracoes das posicoes dos monitores
+#/usr/bin/xmodmap /home/marvin/.config/xorg_configs/Xmodmap &
+#/home/marvin/.config/xorg_configs/default.sh &
+#/usr/bin/nm-applet & 
+# inicia Qtile
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+exec qtile start 

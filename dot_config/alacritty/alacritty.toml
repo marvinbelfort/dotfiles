@@ -1,0 +1,42 @@
+# Demais configurações possíveis:
+# https://alacritty.org/config-alacritty.html
+
+# [shell]
+# program = "/bin/zsh"
+# args = ["-c", "zellij"]
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 8.6
+normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
+offset = { x = 0, y = 0 }
+
+[window]
+opacity=0.9
+blur=true
+
+[colors.normal]
+black = "#1d2021"
+red = "#fb4934"
+green = "#b8bb26"
+yellow = "#fabd2f"
+blue = "#458588"
+magenta = "#ff79c6"
+cyan = "#8ec07c"
+white = "#f8f8f2"
+
+[colors.primary]
+background = "#282828"
+foreground = "#ebdbb2"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+osc52="Disabled"

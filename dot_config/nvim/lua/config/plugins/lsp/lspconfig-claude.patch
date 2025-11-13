@@ -1,0 +1,79 @@
+--- lspconfig.lua.orig	2025-10-01 00:00:00.000000000 -0300
++++ lspconfig.lua	2025-10-01 00:00:00.000000000 -0300
+@@ -6,7 +6,6 @@
+         { "antosha417/nvim-lsp-file-operations", config = true },
+     },
+     config = function()
+-        local lspconfig = require("lspconfig")
+         local cmp_nvim_lsp = require("cmp_nvim_lsp")
+         local keymap = vim.keymap.set
+ 
+@@ -30,7 +29,6 @@
+         end
+ 
+         local capabilities = cmp_nvim_lsp.default_capabilities()
+-        -- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+ 
+         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+         for type, icon in pairs(signs) do
+@@ -38,25 +36,38 @@
+             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+         end
+ 
+-
+-        lspconfig["pyright"].setup({
+-            capabilities = capabilities,
+-            on_attach = on_attach,
+-        })
+-
+-        -- capabilities.workspace = {
+-        --     didChangeWatchedFiles = {
+-        --         dynamicRegistration = true,
+-        --     },
+-        -- }
+-
+-        lspconfig["markdown_oxide"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-        lspconfig["basedpyright"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-        lspconfig["clangd"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-        lspconfig["rust_analyzer"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-
+-        lspconfig["lua_ls"].setup({
+-            capabilities = capabilities,
+-            on_attach = on_attach,
+-            settings = {
++        -- Configuração usando a nova API vim.lsp.config
++        local servers = {
++            pyright = {},
++            markdown_oxide = {},
++            basedpyright = {},
++            clangd = {},
++            rust_analyzer = {},
++            lua_ls = {
++                settings = {
++                    Lua = {
++                        diagnostics = {
++                            globals = { "vim" },
++                        },
++                        workspace = {
++                            library = {
++                                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
++                                [vim.fn.stdpath("config") .. "/lua"] = true,
++                            },
++                        },
++                    },
++                },
++            },
++        }
++
++        -- Configura cada servidor usando vim.lsp.config
++        for server_name, server_config in pairs(servers) do
++            local config = vim.tbl_deep_extend("force", {
++                capabilities = capabilities,
++                on_attach = on_attach,
++            }, server_config)
++            
++            vim.lsp.config[server_name] = config
++            vim.lsp.enable(server_name)
++        end
++    end,
++}

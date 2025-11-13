@@ -1,0 +1,1 @@
+sudo kmonad default.kbd 

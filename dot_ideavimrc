@@ -1,0 +1,76 @@
+
+
+" ===== Settings =====
+set hlsearch
+set ignorecase
+set smartcase
+set incsearch
+set showmode
+set clipboard+=unnamed
+set ruler
+set nu
+set rnu
+set easymotion
+set idearefactormode=keep
+let mapleader =  " "  
+
+" ===== Plugins =====
+set surround
+
+
+" ===== Code style =====
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+
+
+" ===== Editing =====
+nnoremap <leader>; A;<Esc>
+nnoremap <leader>, A,<Esc>
+nnoremap <cr> :w<cr>
+nnoremap - :noh<cr>
+
+" ===== Consistency =====
+nnoremap Y y$
+vnoremap p "_dgP
+
+" ===== Refactorings 
+nnoremap gr :action RenameElement<cr>
+nnoremap gv :action Refactorings.QuickListPopupAction<cr>
+
+
+" ===== Debuggins
+nnoremap gb :action ViewBreakpoints<cr>
+
+
+" ===== Moving =====
+nnoremap g; :action JumpToLastChange<CR>
+nnoremap g, :action JumpToNextChange<CR>
+nnoremap { :action EditorBackwardParagraph<CR>
+nnoremap } :action EditorForwardParagraph<CR>
+map f <Plug>(easymotion-fl)
+map F <Plug>(easymotion-Fl)
+map t <Plug>(easymotion-tl)
+map T <Plug>(easymotion-Tl)
+map s <Plug>(easymotion-s)
+map ç <Plug>(easymotion-bd-jk)
+
+
+" ===== Navigation =====
+nnoremap gf :action FindUsages<cr>
+nnoremap gs :action FileStructurePopup<cr>
+nnoremap gh :action RecentFiles<cr>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap <c-o> :action Back<CR>
+nnoremap <c-i> :action Forward<CR>
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+
+" ===== Windows =====
+nnoremap <leader>h :action SplitHorizontally<CR>
+nnoremap <leader>v :action SplitVertically<CR>
+nnoremap <leader>q :action CloseContent<CR>
+nnoremap gt :action ActivateTerminalToolWindow<cr>
+nnoremap gq :action Exit<cr>

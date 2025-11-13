@@ -1,0 +1,152 @@
+--- a/lua/config/plugins/lsp/lspconfig.lua
++++ b/lua/config/plugins/lsp/lspconfig.lua
+@@
+ return {
+     "neovim/nvim-lspconfig",
+     event = { "BufReadPre", "BufNewFile" },
+     dependencies = {
+         "hrsh7th/cmp-nvim-lsp",
+         { "antosha417/nvim-lsp-file-operations", config = true },
+     },
+     config = function()
+-        local lspconfig = require("lspconfig")
+         local cmp_nvim_lsp = require("cmp_nvim_lsp")
+         local keymap = vim.keymap.set
+ 
+         local on_attach = function()
+             keymap("n", "gR", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" })
+             keymap("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+             keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP definitions" })
+             keymap("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "Show LSP implementations" })
+             keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "Show LSP type definitions" })
+             keymap("n", "gh", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" })
+             keymap("n", "gr", vim.lsp.buf.rename, { desc = "Smart rename" })
+             keymap("n", "gy", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Source symbols" })
+             keymap({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "See available code actions" })
+             keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+             keymap("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+             keymap("n", "=", vim.lsp.buf.format, { desc = "Format Source" })
+             keymap("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Show buffer diagnostics" })
+             keymap("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+             keymap("n", "<leader>lr", ":LspRestart<CR>", { desc = "Lsp: Restart" })
+             keymap("n", "<leader>li", ":LspInfo<CR>", { desc = "Lsp: Info" })
+             keymap('n', '<leader>lh',
+                 function() vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled()) end,
+                 { desc = "Lsp: Toggle inlay hints" })
+         end
+ 
+         local capabilities = cmp_nvim_lsp.default_capabilities()
+@@
+         for type, icon in pairs(signs) do
+             local hl = "DiagnosticSign" .. type
+             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+         end
+ 
+-
+-        lspconfig["pyright"].setup({
+-            capabilities = capabilities,
+-            on_attach = on_attach,
+-        })
+-
+-        -- capabilities.workspace = {
+-        --     didChangeWatchedFiles = {
+-        --         dynamicRegistration = true,
+-        --     },
+-        -- }
+-
+-        lspconfig["markdown_oxide"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-        lspconfig["basedpyright"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-        lspconfig["clangd"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-        lspconfig["rust_analyzer"].setup({ capabilities = capabilities, on_attach = on_attach, })
+-
+-        lspconfig["lua_ls"].setup({
+-            capabilities = capabilities,
+-            on_attach = on_attach,
+-            settings = {
+-                Lua = {
+-                    diagnostics = {
+-                        globals = { "vim" },
+-                    },
+-                    workspace = {
+-                        library = {
+-                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+-                            [vim.fn.stdpath("config") .. "/lua"] = true,
+-                        },
+-                    },
+-                },
+-            },
+-        })
++        -- === Nova abordagem: vim.lsp.config + vim.lsp.start ===
++        -- Definições por servidor
++        vim.lsp.config["pyright"] = {
++          name = "pyright",
++          cmd = { "pyright-langserver", "--stdio" },
++          capabilities = capabilities,
++          on_attach = on_attach,
++          filetypes = { "python" },
++        }
++
++        vim.lsp.config["basedpyright"] = {
++          name = "basedpyright",
++          cmd = { "basedpyright-langserver", "--stdio" },
++          capabilities = capabilities,
++          on_attach = on_attach,
++          filetypes = { "python" },
++        }
++
++        vim.lsp.config["clangd"] = {
++          name = "clangd",
++          cmd = { "clangd" },
++          capabilities = capabilities,
++          on_attach = on_attach,
++          filetypes = { "c", "cpp", "objc", "objcpp" },
++        }
++
++        vim.lsp.config["rust_analyzer"] = {
++          name = "rust_analyzer",
++          cmd = { "rust-analyzer" },
++          capabilities = capabilities,
++          on_attach = on_attach,
++          filetypes = { "rust" },
++        }
++
++        vim.lsp.config["lua_ls"] = {
++          name = "lua_ls",
++          cmd = { "lua-language-server" },
++          capabilities = capabilities,
++          on_attach = on_attach,
++          settings = {
++            Lua = {
++              diagnostics = { globals = { "vim" } },
++              workspace = {
++                library = {
++                  [vim.fn.expand("$VIMRUNTIME/lua")] = true,
++                  [vim.fn.stdpath("config") .. "/lua"] = true,
++                },
++              },
++            },
++          },
++          filetypes = { "lua" },
++        }
++
++        -- IMPORTANTE: binário com hífen
++        vim.lsp.config["markdown_oxide"] = {
++          name = "markdown_oxide",
++          cmd = { "markdown-oxide" },
++          capabilities = capabilities,
++          on_attach = on_attach,
++          filetypes = { "markdown", "mdx" },
++        }
++
++        -- Autostart simples por FileType
++        local autocmd = vim.api.nvim_create_autocmd
++        local start = function(name) return function() vim.lsp.start(vim.lsp.config[name]) end end
++
++        autocmd("FileType", { pattern = { "python" },  callback = start("pyright") })
++        autocmd("FileType", { pattern = { "python" },  callback = start("basedpyright") })
++        autocmd("FileType", { pattern = { "c","cpp","objc","objcpp" }, callback = start("clangd") })
++        autocmd("FileType", { pattern = { "rust" },    callback = start("rust_analyzer") })
++        autocmd("FileType", { pattern = { "lua" },     callback = start("lua_ls") })
++        autocmd("FileType", { pattern = { "markdown","mdx" }, callback = start("markdown_oxide") })
+     end,
+ }
