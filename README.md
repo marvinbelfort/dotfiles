@@ -1,11 +1,9 @@
 # Arch ChezMoi Dotfiles
 
-> Estado capturado com `pacman -Qe` em 25 de dezembro de 2025.
-
 ## Stack Base
 - **Distro:** [Arch Linux](https://archlinux.org/)
 - **WM/Compositor:** [Hyprland](https://hyprland.org/) (Wayland) + [Qtile](https://qtile.org/) (X11)
-- **Terminal padrão:** [foot](https://codeberg.org/dnkl/foot)
+- **Terminal padrão:** [allacritty](https://codeberg.org/dnkl/foot)
 - **Shell:** `zsh` + [oh-my-zsh](https://ohmyz.sh/) + `powerlevel10k`
 - **Editor principal:** [Neovim](https://neovim.io/) (LazyVim) com apoio de VS Code e Obsidian
 - **Status/desktop services:** Waybar, dunst, hyprpaper, cliphist, copyq
@@ -20,11 +18,7 @@ Legenda:
 ### Terminais e Multiplexadores
 - [x] foot — `~/.config/foot` (dot_config/foot)
 - [x] Alacritty — `~/.config/alacritty`
-- [ ] Contour — `~/.config/contour` (faltando no chezmoi)
-- [ ] WezTerm — sem `~/.config` (usa `~/.wezterm.lua`)
 - [x] Terminator — `~/.config/terminator`
-- [ ] tmux — sem `~/.config` (usa `~/.tmux.conf` direto na home)
-- [ ] zellij — `~/.config/zellij` (ainda fora do chezmoi)
 
 ### Launchers, Shells Gráficas e Indicadores
 - [x] Hyprland — `~/.config/hypr` (inclui hyprpaper, autostart, keybinds)
@@ -34,10 +28,6 @@ Legenda:
 - [x] picom — `~/.config/picom`
 - [x] rofi — `~/.config/rofi`
 - [ ] walker — `~/.config/walker`
-- [ ] wofi — sem `~/.config` (usa defaults)
-- [ ] fuzzel — `~/.config/fuzzel`
-- [ ] hyprlauncher — sem `~/.config` (usa `~/.local/share`)
-- [ ] copyq — `~/.config/copyq`
 - [ ] cliphist — sem `~/.config` dedicado (histórico em SQLite dentro de `~/.local/share/cliphist`)
 
 ### Navegadores e Web
@@ -60,10 +50,7 @@ Legenda:
 - [ ] Unity Hub — `~/.config/unityhub`
 - [ ] Godot — `~/.config/godot`
 - [ ] Android tools/Studio — `~/.config/Android Open Source Project`
-- [ ] Blender — `~/.config/blender`
 - [ ] Godot & engines 3D extras — idem acima
-- [ ] Elephant suite (clipboard/calc/apps) — `~/.config/elephant*`
-- [x] kmonad — `~/.config/kmonad`
 
 ### Audio & Música
 - [ ] Audacious — `~/.config/audacious`
@@ -100,7 +87,7 @@ Legenda:
 - [ ] Godot — `~/.config/godot`
 - [ ] gpick — `~/.config/gpick`
 - [ ] PureRef — `~/.config/PureRef`
-- [ ] Filelight — `~/.config/filelightrc`
+- [ ] Freecad — `~/.config/FreeCAD/`
 
 ### Leitura & PDF/Ebooks
 - [ ] Okular — `~/.config/okularrc`
@@ -112,14 +99,6 @@ Legenda:
 
 ### Gerenciadores de Arquivos (GUI/TUI)
 - [ ] Thunar — `~/.config/Thunar`
-- [ ] Nemo — `~/.config/nemo`
-- [ ] Nautilus — `~/.config/nautilus`
-- [ ] PCManFM — `~/.config/pcmanfm`
-- [ ] Double Commander — `~/.config/doublecmd`
-- [x] Ranger — `~/.config/ranger`
-- [ ] Yazi — `~/.config/yazi`
-- [ ] Midnight Commander — `~/.config/mc`
-- [ ] Filelight — `~/.config/filelightrc`
 
 ### Rede, Downloads e DevOps
 - [ ] Docker/Buildx/Compose — `~/.config/docker`
@@ -138,20 +117,9 @@ Legenda:
 - [ ] Wivrn Dashboard — `~/.config/wivrn`
 
 ### Sistema & Utilidades
-- [ ] CopyQ — `~/.config/copyq`
+- [x] kmonad — `~/.config/kmonad`
 - [ ] Elephant (calc/clipboard/apps) — `~/.config/elephant*`
 - [ ] Papirus / temas — `~/.config` (diversos arquivos GTK)
 - [ ] Nerd Fonts — sem configs (apenas fontes em `/usr/share/fonts`)
 - [ ] expac/progress/lshw/lsof/dmidecode — ferramentas sem diretórios em `~/.config`
 
-## Vídeos, imagens e PDFs (resumo rápido)
-- **Players de vídeo:** mpv, VLC, Shotcut, OpenShot, Jellyfin Web, Wivrn Dashboard (ver status acima).
-- **Visualizadores de imagem:** Gwenview, feh, sxiv, Imagemagick display.
-- **Leitores de PDF/Ebook:** Okular, Zathura (+ mupdf), FBReader, Calibre.
-
-## Como atualizar este inventário
-1. Gere a lista atual de pacotes explícitos: `pacman -Qe > pkg-list.txt`.
-2. Compare com este README e atualize as seções afetadas (adição/remoção de aplicativos finais).
-3. Registre via chezmoi: `chezmoi git add README.md && chezmoi git commit -m "docs: atualiza README" && chezmoi git push`.
-
-> Dica: mantenha `pkg-list.txt` versionado ou anexado como referência para diffs futuros.
