@@ -1,17 +1,17 @@
 {
   "server_version": "20.14.1",
   "openvr_config": {
-    "eye_resolution_width": 2144,
-    "eye_resolution_height": 2336,
-    "target_eye_resolution_width": 2144,
-    "target_eye_resolution_height": 2336,
+    "eye_resolution_width": 2592,
+    "eye_resolution_height": 2848,
+    "target_eye_resolution_width": 2592,
+    "target_eye_resolution_height": 2848,
     "tracking_ref_only": false,
     "enable_vive_tracker_proxy": false,
     "minimum_idr_interval_ms": 100,
     "adapter_index": 0,
     "codec": 1,
     "h264_profile": 0,
-    "refresh_rate": 72,
+    "refresh_rate": 90,
     "use_10bit_encoder": false,
     "use_full_range_encoding": true,
     "encoding_gamma": 1.0,
@@ -19,15 +19,15 @@
     "force_hdr_srgb_correction": false,
     "clamp_hdr_extended_range": false,
     "enable_amf_pre_analysis": false,
-    "enable_vbaq": false,
+    "enable_vbaq": true,
     "enable_amf_hmqb": false,
     "use_amf_preproc": false,
     "amf_preproc_sigma": 4,
     "amf_preproc_tor": 7,
-    "encoder_quality_preset": 2,
+    "encoder_quality_preset": 0,
     "rate_control_mode": 0,
     "filler_data": false,
-    "entropy_coding": 1,
+    "entropy_coding": 0,
     "force_sw_encoding": false,
     "sw_thread_count": 0,
     "controller_is_tracker": false,
@@ -41,17 +41,17 @@
     "foveation_center_shift_y": 0.1,
     "foveation_edge_ratio_x": 4.0,
     "foveation_edge_ratio_y": 5.0,
-    "enable_color_correction": false,
+    "enable_color_correction": true,
     "brightness": 0.0,
-    "contrast": 0.0,
-    "saturation": 0.0,
-    "gamma": 0.0,
-    "sharpening": 0.0,
+    "contrast": 0.1,
+    "saturation": 0.3,
+    "gamma": 1.0,
+    "sharpening": 0.7,
     "linux_async_compute": false,
     "linux_async_reprojection": false,
-    "nvenc_quality_preset": 1,
+    "nvenc_quality_preset": 6,
     "nvenc_tuning_preset": 2,
-    "nvenc_multi_pass": 1,
+    "nvenc_multi_pass": 2,
     "nvenc_adaptive_quantization_mode": 1,
     "nvenc_low_delay_key_frame_scale": -1,
     "nvenc_refresh_rate": -1,
@@ -83,13 +83,6 @@
     "_decoder_debug": false
   },
   "client_connections": {
-    "1601.client": {
-      "display_name": "Quest 2",
-      "current_ip": null,
-      "manual_ips": [],
-      "trusted": true,
-      "connection_state": "Disconnected"
-    },
     "7096.client": {
       "display_name": "Quest 2",
       "current_ip": null,
@@ -134,7 +127,7 @@
       "bitrate": {
         "gui_collapsed": false,
         "mode": {
-          "ConstantMbps": 100,
+          "ConstantMbps": 150,
           "Adaptive": {
             "gui_collapsed": true,
             "saturation_multiplier": 0.95,
@@ -194,13 +187,13 @@
         }
       },
       "color_correction": {
-        "enabled": false,
+        "enabled": true,
         "content": {
           "brightness": 0.0,
-          "contrast": 0.0,
-          "saturation": 0.5,
+          "contrast": 0.1,
+          "saturation": 0.3,
           "gamma": 1.0,
-          "sharpening": 0.5
+          "sharpening": 0.7
         }
       },
       "max_buffering_frames": 2.0,
@@ -209,9 +202,9 @@
       "encoder_config": {
         "gui_collapsed": true,
         "quality_preset": {
-          "variant": "Speed"
+          "variant": "Quality"
         },
-        "enable_vbaq": false,
+        "enable_vbaq": true,
         "rate_control_mode": {
           "variant": "Cbr"
         },
@@ -219,7 +212,7 @@
           "variant": "High"
         },
         "entropy_coding": {
-          "variant": "Cavlc"
+          "variant": "Cabac"
         },
         "filler_data": false,
         "use_10bit": false,
@@ -238,13 +231,13 @@
         "nvenc": {
           "gui_collapsed": true,
           "quality_preset": {
-            "variant": "P1"
+            "variant": "P6"
           },
           "tuning_preset": {
             "variant": "LowLatency"
           },
           "multi_pass": {
-            "variant": "QuarterResolution"
+            "variant": "FullResolution"
           },
           "adaptive_quantization_mode": {
             "variant": "Spatial"
@@ -321,7 +314,7 @@
       "transcoding_view_resolution": {
         "Scale": 1.0,
         "Absolute": {
-          "width": 2144,
+          "width": 2592,
           "height": {
             "set": false,
             "content": 1072
@@ -332,7 +325,7 @@
       "emulated_headset_view_resolution": {
         "Scale": 1.0,
         "Absolute": {
-          "width": 2144,
+          "width": 2592,
           "height": {
             "set": false,
             "content": 1072
@@ -340,7 +333,7 @@
         },
         "variant": "Absolute"
       },
-      "preferred_fps": 72.0,
+      "preferred_fps": 90.0,
       "adapter_index": 0,
       "clientside_foveation": {
         "enabled": false,
