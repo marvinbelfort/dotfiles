@@ -19,7 +19,7 @@ alias qtconsole='jupyter-qtconsole --style gruvbox-dark'
 
 alias pc='sudo pacman'
 
-alias yay='yay --answerclean All --answerdiff None --answeredit None'
+#alias yay='yay --answerclean All --answerdiff None --answeredit None'
 
 alias l='eza --group-directories-first -la --icons=auto -s extension'
 alias ls='eza --group-directories-first --icons=auto -s extension' 
