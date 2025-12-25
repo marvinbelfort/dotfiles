@@ -1,12 +1,12 @@
-model = "gpt-5-codex"
-model_reasoning_effort = "high"
+model = "gpt-5.1-codex"
+model_reasoning_effort = "medium"
 
 # Optional: allow network in workspace-write mode
 [sandbox_workspace_write]
 network_access = true
 
-[tools]
-web_search = true
+[features]
+web_search_request = true
 
 [mcp_servers.context7]
 command = "npx"
@@ -22,3 +22,52 @@ trust_level = "trusted"
 
 [projects."/home/marvin/data/source/nms_base_calculators"]
 trust_level = "trusted"
+
+[projects."/home/marvin/data/source/chord_trainer"]
+trust_level = "trusted"
+
+[projects."/home/marvin"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/vr_poc"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/VRpoc"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/GodotPoc"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/lomse"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/zimage"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/wan2.2_modal_poc"]
+trust_level = "trusted"
+
+[projects."/home/marvin/tmp"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/estudo/TCU"]
+trust_level = "trusted"
+
+[projects."/home/marvin/.config/nvim"]
+trust_level = "trusted"
+
+[projects."/home/marvin/.config/walker/themes"]
+trust_level = "trusted"
+
+[projects."/home/marvin/.config/kmonad"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/obsidian"]
+trust_level = "trusted"
+
+[projects."/home/marvin/.config"]
+trust_level = "trusted"
+
+[notice]
+hide_gpt5_1_migration_prompt = true
+"hide_gpt-5.1-codex-max_migration_prompt" = true
