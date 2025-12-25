@@ -1,22 +1,39 @@
 local opt = vim.opt
 local g = vim.g
- 
 
---clipboard
-opt.clipboard:append { 'unnamedplus', 'unnamed' }
 
--- g.clipboard = {
---     name = "xclip-wl-clipboard",
---     copy = {
---         ["+"] = "xclip -selection clipboard || wl-copy",
---         ["*"] = "xclip -selection clipboard || wl-copy",
---     },
---     paste = {
---         ["+"] = "xclip -selection clipboard -o || wl-paste",
---         ["*"] = "xclip -selection clipboard -o || wl-paste",
---     },
---     cache_enabled = 1
--- }
+-- clipboard backends for Wayland/X11
+opt.clipboard = 'unnamedplus'
+
+local has_wayland = vim.env.WAYLAND_DISPLAY ~= nil and vim.env.WAYLAND_DISPLAY ~= ''
+
+if has_wayland then
+    g.clipboard = {
+        name = "wl-clipboard",
+        copy = {
+            ["+"] = "wl-copy --type text/plain",
+            ["*"] = "wl-copy --primary --type text/plain",
+        },
+        paste = {
+            ["+"] = "wl-paste --no-newline",
+            ["*"] = "wl-paste --primary --no-newline",
+        },
+        cache_enabled = 0,
+    }
+elseif vim.fn.executable('xclip') == 1 then
+    g.clipboard = {
+        name = "xclip",
+        copy = {
+            ["+"] = "xclip -selection clipboard",
+            ["*"] = "xclip -selection primary",
+        },
+        paste = {
+            ["+"] = "xclip -selection clipboard -o",
+            ["*"] = "xclip -selection primary -o",
+        },
+        cache_enabled = 0,
+    }
+end
 
 -- Global Options
 opt.number = true
