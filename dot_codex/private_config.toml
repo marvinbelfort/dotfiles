@@ -1,4 +1,4 @@
-model = "gpt-5.1-codex"
+model = "gpt-5.2"
 model_reasoning_effort = "medium"
 
 # Optional: allow network in workspace-write mode
@@ -7,6 +7,8 @@ network_access = true
 
 [features]
 web_search_request = true
+unified_exec = true
+shell_snapshot = true
 
 [mcp_servers.context7]
 command = "npx"
@@ -68,6 +70,60 @@ trust_level = "trusted"
 [projects."/home/marvin/.config"]
 trust_level = "trusted"
 
+[projects."/home/marvin/data/source"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/contos-parser"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/contos-catalog"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/kokoro_tts"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/tortoise_tts"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/cpu_cache_error"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/fish_tts"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/gitnotes"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/fish_tts/fish-speech"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/fish-speech-tts/fish-speech"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/OpenVoice"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/OpenVoice/openVoiceV2_docker"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/books/Desconhecido/Aristoteles (349)"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/filosofia/filosofia360"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/filosofia/filosofia360/02 - Sofistas, Sócrates e Platão"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/ltx-2"]
+trust_level = "trusted"
+
+[projects."/home/marvin/data/source/chatterbox"]
+trust_level = "trusted"
+
 [notice]
 hide_gpt5_1_migration_prompt = true
 "hide_gpt-5.1-codex-max_migration_prompt" = true
+
+[notice.model_migrations]
+"gpt-5.2" = "gpt-5.2-codex"
